@@ -739,10 +739,10 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/";ok
 
 # running "Show hidden files by default"
-# defaults write com.apple.finder AppleShowAllFiles -bool true;ok
+# defaults write com.apple.finder AppleShowAllFiles -bool false;ok
 
 # running "Show all filename extensions"
-# defaults write NSGlobalDomain AppleShowAllExtensions -bool true;ok
+# defaults write NSGlobalDomain AppleShowAllExtensions -bool false;ok
 
 running "Show status bar"
 defaults write com.apple.finder ShowStatusBar -bool true;ok
@@ -754,7 +754,7 @@ running "Allow text selection in Quick Look"
 defaults write com.apple.finder QLEnableTextSelection -bool true;ok
 
 # running "Display full POSIX path as Finder window title"
-# defaults write com.apple.finder _FXShowPosixPathInTitle -bool true;ok
+# defaults write com.apple.finder _FXShowPosixPathInTitle -bool false;ok
 
 running "When performing a search, search the current folder by default"
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf";ok
@@ -785,8 +785,8 @@ running "Use list view in all Finder windows by default"
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv";ok
 
-# running "Disable the warning before emptying the Trash"
-# defaults write com.apple.finder WarnOnEmptyTrash -bool false;ok
+# running "Enable the warning before emptying the Trash"
+# defaults write com.apple.finder WarnOnEmptyTrash -bool true;ok
 
 # running "Empty Trash securely by default"
 # defaults write com.apple.finder EmptyTrashSecurely -bool true;ok
@@ -816,7 +816,7 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true;ok
 # defaults write com.apple.dock tilesize -int 36;ok
 
 # running "Change minimize/maximize window effect to scale"
-# defaults write com.apple.dock mineffect -string "scale";ok
+# defaults write com.apple.dock mineffect -string "genie";ok
 
 # running "Minimize windows into their application’s icon"
 # defaults write com.apple.dock minimize-to-application -bool true;ok
@@ -952,8 +952,8 @@ bot "Configuring Mail"
 # defaults write com.apple.mail DisableReplyAnimations -bool true
 # defaults write com.apple.mail DisableSendAnimations -bool true;ok
 
-# running "Copy email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
-# defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false;ok
+running "Copy email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false;ok
 
 # running "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app"
 # defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9";ok
@@ -963,8 +963,8 @@ bot "Configuring Mail"
 # defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
 # defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date";ok
 
-# running "Disable inline attachments (just show the icons)"
-# defaults write com.apple.mail DisableInlineAttachmentViewing -bool true;ok
+running "Disable inline attachments (just show the icons)"
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool true;ok
 
 # running "Disable automatic spell checking"
 # defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled";ok
